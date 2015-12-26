@@ -73,6 +73,8 @@ gem 'pghero'
 # SEO Meta Tags
 gem 'metamagic'
 
+gem 'api_bomb'
+
 gem 'newrelic_rpm'
 
 group :development do

@@ -1,0 +1,14 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @project.name
+p
+  strong Base url:
+  = @project.base_url
+
+= link_to 'Create Test', new_project_test_path(@project)
+'|
+= link_to 'Edit', edit_project_path(@project)
+'|
+= link_to 'Back', projects_path

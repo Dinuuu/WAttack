@@ -1,0 +1,31 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @test.name
+p
+  strong Concurrent users:
+  = @test.concurrent_users
+p
+  strong Duration:
+  = @test.duration
+p
+  strong Path:
+  = @test.path
+p
+  strong Headers:
+  = @test.headers
+p
+  strong Params:
+  = @test.params
+p
+  strong Body:
+  = @test.body
+
+= link_to 'Edit', edit_project_test_path(@project, @test)
+'|
+= link_to 'Back', project_path(@project)
+'|
+= link_to 'Run this shit', run_project_test_path(@project, @test)
+'|
+= link_to 'Lets see those results', project_test_results_path(@project, @test)

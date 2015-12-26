@@ -1,0 +1,35 @@
+h1 Listing tests
+
+table
+  thead
+    tr
+      th Name
+      th Concurrent users
+      th Duration
+      th Path
+      th Project
+      th Headers
+      th Params
+      th Body
+      th
+      th
+      th
+
+  tbody
+    - @tests.each do |test|
+      tr
+        td = test.name
+        td = test.concurrent_users
+        td = test.duration
+        td = test.path
+        td = test.project
+        td = test.headers
+        td = test.params
+        td = test.body
+        td = link_to 'Show', test
+        td = link_to 'Edit', edit_test_path(test)
+        td = link_to 'Destroy', test, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Test', new_test_path
